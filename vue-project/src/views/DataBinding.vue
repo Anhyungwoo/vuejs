@@ -70,6 +70,14 @@
       </tbody>
     </table>
   </div>
+  <br />
+  <div>
+    <h1 v-if="type == 'A'">A</h1>
+    <h1 v-else-if="type == 'B'">B</h1>
+    <h1 v-else>C</h1>
+    <h1 v-show="bShow">bShow가 true면 출력</h1>
+    <h1 v-show="bShow2">bShow2가 true면 출력</h1>
+  </div>
 </template>
 <script>
 export default {
@@ -91,39 +99,42 @@ export default {
       styleObject: {
         color: "red",
         fontSize: "30px",
-        productList: [
-          {
-            product_name: "기계식키보드",
-            price: 25000,
-            category: "노트북/태블릿",
-            delivery_price: 5000,
-          },
-          {
-            product_name: "무선마우스",
-            price: 12000,
-            category: "노트북/태블릿",
-            delivery_price: 5000,
-          },
-          {
-            product_name: "아이패드",
-            price: 725000,
-            category: "노트북/태블릿",
-            delivery_price: 5000,
-          },
-          {
-            product_name: "태블릿거치대",
-            price: 32000,
-            category: "노트북/태블릿",
-            delivery_price: 5000,
-          },
-          {
-            product_name: "무선충전기",
-            price: 42000,
-            category: "노트북/태블릿",
-            delivery_price: 5000,
-          },
-        ],
       },
+      productList: [
+        {
+          product_name: "기계식키보드",
+          price: 25000,
+          category: "노트북/태블릿",
+          delivery_price: 5000,
+        },
+        {
+          product_name: "무선마우스",
+          price: 12000,
+          category: "노트북/태블릿",
+          delivery_price: 5000,
+        },
+        {
+          product_name: "아이패드",
+          price: 725000,
+          category: "노트북/태블릿",
+          delivery_price: 5000,
+        },
+        {
+          product_name: "태블릿거치대",
+          price: 32000,
+          category: "노트북/태블릿",
+          delivery_price: 5000,
+        },
+        {
+          product_name: "무선충전기",
+          price: 42000,
+          category: "노트북/태블릿",
+          delivery_price: 5000,
+        },
+      ],
+      type: "A",
+      bShow: true,
+      bShow2: false,
     };
   },
   methods: {
